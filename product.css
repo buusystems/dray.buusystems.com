@@ -1,0 +1,30 @@
+/* Product landing pages; loads after home.css. */
+.lead { margin-top: .75rem; min-height: min(760px, calc(100vh - 96px)); }
+.lead .copy { display: flex; flex-direction: column; align-items: center; width: 100%; padding-top: clamp(2.5rem, 6vw, 4.5rem); text-align: center; }
+.lead .icon { width: 84px; max-width: none; margin-bottom: 1.1rem; }
+.lead .i-dray b { font-size: 2.4rem; }
+.lead h1 { max-width: 15ch; font-size: clamp(2.5rem, 6.4vw, 4.75rem); line-height: 1.05; }
+.lead h1.big { max-width: none; font-size: clamp(6rem, 22vw, 15rem); line-height: 1; padding-inline: .08em; }
+.lead .copy > p:not(.name) { max-width: 34rem; font-size: clamp(1.1rem, 2vw, 1.35rem); }
+.ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: .7rem; margin-top: 1.6rem; }
+.ctas .btn { margin-top: 0; }
+.t-plw .icon, .t-dray .icon { box-shadow: 0 0 0 1px rgba(255, 255, 255, .22), 0 8px 18px -8px #000; }
+.btn.ghost { background: transparent; color: inherit; box-shadow: inset 0 0 0 1.5px currentColor; }
+.lead .leads { width: min(560px, 100%); margin-inline: auto; }
+.lead .tree svg { max-width: 620px; }
+.lead .score { right: max(1.25rem, calc(50% - 330px)); }
+.lead .photo { height: min(56%, 520px); object-position: 60% 62%; }
+.t-boot.lead { min-height: 1000px; }
+.t-dray.lead { justify-content: center; }
+.t-dray.lead .copy { padding-block: 3rem; }
+.feats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 1.25rem; padding-bottom: clamp(4rem, 8vw, 7rem); }
+.feat { padding: 2.25rem 2rem; border-radius: 28px; background: #f2f2f5; }
+.feat h2 { font-size: 1.6rem; font-weight: 700; letter-spacing: -.03em; line-height: 1.15; }
+.feat p { margin-top: .6rem; color: var(--soft); font-size: 1.0625rem; }
+.foot.plain { background: none; }
+@media (max-width: 860px) {
+  .feats { grid-template-columns: 1fr; }
+  .lead { min-height: calc(100svh - 84px); }
+  .t-boot.lead { min-height: 820px; }
+  .lead .photo { height: 46%; }
+}
