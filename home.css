@@ -1,4 +1,4 @@
-/* Home page only. The other pages use styles.css / genie-marie.css. */
+/* Home page and product pages (with product.css). */
 :root {
   --ink: #1d1d1f; --soft: #6e6e73; --page: #fbfbfd; --red: #d00;
   --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -43,8 +43,6 @@ h1 { font-size: clamp(2.75rem, 7.4vw, 5.5rem); font-weight: 700; line-height: 1.
 .icon { display: grid; place-items: center; width: 68px; max-width: 88%; aspect-ratio: 1; margin: 0 auto .45rem; border-radius: 23%; overflow: hidden; font-style: normal; box-shadow: 0 8px 18px -8px rgba(0, 0, 0, .4); transition: transform .45s cubic-bezier(.3, 1.8, .5, 1); }
 .dock a:hover .icon { transform: translateY(-10px) scale(1.12); }
 .icon img { width: 100%; height: 100%; object-fit: cover; }
-.i-genie { background: linear-gradient(150deg, #0b2a66, #1e62bd 60%, #6fb3f0); align-items: end; }
-.i-genie img { width: 84%; height: 90%; object-fit: contain; object-position: bottom; }
 .i-dray { background: linear-gradient(145deg, #3a3a3c, #0b0b0c); color: #fff; font-size: 2rem; }
 .i-boot { background: linear-gradient(150deg, #ff3b30, #a80000); }
 .i-boot img { width: 66%; height: 66%; object-fit: contain; }
@@ -106,11 +104,6 @@ h1 { font-size: clamp(2.75rem, 7.4vw, 5.5rem); font-weight: 700; line-height: 1.
 .fn rect { fill: #fff; filter: drop-shadow(0 10px 16px rgba(20, 90, 45, .18)); }
 .fn text { text-anchor: middle; font: 600 17px ui-monospace, "SF Mono", Menlo, monospace; fill: #14532d; }
 
-/* Genie Marie */
-.t-genie { background: radial-gradient(70% 120% at 82% 60%, #7cc0f7, #1e62bd 48%, #0b2a66); color: #fff; }
-.t-genie .name { color: #ffd77a; }
-.genie { flex: 0 1 380px; width: 34%; align-self: flex-end; margin: 2.5rem clamp(1.5rem, 5vw, 5rem) 0 0; animation: float 6s ease-in-out infinite; }
-
 /* bpfboot */
 .t-boot { background: #05070f; color: #fff; justify-content: flex-start; }
 .t-boot .name { color: #8db4ff; }
@@ -151,7 +144,6 @@ blockquote { font-size: clamp(1.9rem, 4.2vw, 3.1rem); font-weight: 700; line-hei
 
 @keyframes drift { to { transform: translate(6vw, 4vh) scale(1.12); } }
 @keyframes wheel { 0%, 12% { transform: rotate(0); } 70%, 100% { transform: rotate(1440deg); } }
-@keyframes float { 50% { transform: translateY(-12px); } }
 @keyframes flow { to { stroke-dashoffset: -52; } }
 @keyframes sway { from { transform: rotate(-6deg); } to { transform: rotate(6deg); } }
 @keyframes armL { from { transform: rotate(-14deg); } to { transform: rotate(46deg); } }
@@ -165,7 +157,6 @@ blockquote { font-size: clamp(1.9rem, 4.2vw, 3.1rem); font-weight: 700; line-hei
   .tile { min-height: 0; border-radius: 28px; }
   .wide .copy { padding-bottom: 0; }
   .chat { flex: none; width: min(440px, 100% - 2.5rem); margin: 2rem auto 1.5rem; padding: 1.1rem; }
-  .genie { flex: none; width: 62%; max-width: 300px; margin: 1.5rem auto 0; align-self: center; }
   .t-boot { min-height: 560px; }
   .short { min-height: 290px; }
   .dock { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.1rem 0; width: 100%; max-width: 420px; margin-inline: auto; }
